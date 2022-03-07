@@ -23,6 +23,7 @@ body{
         display: flex;
         align-items: center;
         width: 70%;
+        max-width: 63rem;
         background: #fff url(images/bg-pattern-desktop.svg) no-repeat -624px -294px / auto;
         background-origin: content-box;
         border-radius: 25px;
