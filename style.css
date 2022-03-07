@@ -1,269 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@403;702&display=swap');
-
 body{
     margin: 0;
+}
+
+a{
+    text-decoration: none;
     padding: 0;
-    height: 100vh;
-    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 14px;
+    color: black;
 }
 
-@media screen and (min-width: 1440px){
-    .container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
+/* Navigation bar section ! */
 
-    }
-
-    .content-container{
-        display: flex;
-        align-items: center;
-        width: 70%;
-        max-width: 63rem;
-        background: #fff url(images/bg-pattern-desktop.svg) no-repeat -624px -294px / auto;
-        background-origin: content-box;
-        border-radius: 25px;
-        padding-bottom: 2.5em;
-        padding-top: 2.5em;
-    }
-
-    .svg-images{
-        width: 60%;
-        overflow: hidden;
-    }
-
-   .svg-image-desktop{
-       transform: translateX(-80px);
-   }
-
-    section{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 90%;
-    }
-
-    .FAQ{
-        display: flex;
-        width: 70%;
-        flex-direction: column;
-    }
-
-    h1{
-        font-size: 3em;
-    }
-
-    span{
-        margin: 10px 10px 10px 0;
-    }
-
-    hr{
-        background-color: hsl(240, 5%, 91%);
-        border: none;
-        height: 1px;
-        width: 100%;
-        margin: 10px;
-    }
-
-    @keyframes sweep {
-
-        from{
-            height: 0;
-        }
-
-        to {
-            height: auto;
-        }
-    }
-
-    details:hover{
-        cursor: pointer;
-    }
-
-    details > summary {
-        list-style: none;
-    }
-
-    details > summary > object{
-        float: right;
-        top: 0.5em;
-        position: relative;
-    }
-
-
-    details > span{
-        margin: 0;
-        display: block;
-        overflow: hidden;
-    }
-
-    details[open] summary {
-        font-weight: bold;
-        margin-bottom: 1em;
-
-    }
-
-    details[open] .spanFadeIn{
-        margin: 0;
-        display: block;
-        animation: spanFadeIn 1s ease-in forwards;
-    }
-
-    details[open] summary > object {
-        animation: arrowRotate 1s ease forwards;
-    }
-
-    @keyframes arrowRotate {
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(180deg);
-        }
-    }
-
-    .oui{
-        animation: oui 2s ease-in;
-    }
-
-    @keyframes oui {
-        0%{
-            height: 0;
-        }
-
-        50%{
-            height: 50%;
-        }
-
-        100%{
-            height: 100%;
-        }
-    }
-
-
-    @keyframes spanFadeIn {
-
-        from {
-            opacity: 0;
-            transform: translateY(-100%);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    details > summary:hover {
-        color: orange;
-    }
-    details > summary::-webkit-details-marker {
-        display: none;
-    }
-
-    .svg-image-mobile{
-        display: none;
-    }
+.nav-bar{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    gap: 10rem;
+    font-size: 2rem;
+    background-color: aliceblue ;
 }
 
-@media  screen and (min-width: 375px) and (max-width: 1439px) {
-    .container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-    }
-
-    .content-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        background-color: white;
-        border-radius: 25px;
-    }
-
-    h1{
-        font-size: 3em;
-        margin: 0 0 20px 0;
-        text-align: center;
-    }
-
-    hr{
-        background-color: hsl(240, 5%, 91%);
-        border: none;
-        height: 1px;
-        width: 100%;
-    }
-
-    section{
-        width: 90%;
-    }
-    .FAQ{
-        display: flex;
-        flex-direction: column;
-        transform: translateY(-40px);
-        text-align: left;
-    }
-
-    span{
-        margin: 10px 0 10px 0;
-        width: 100%;
-    }
-
-    details > summary {
-        list-style: none;
-    }
-    details > summary::-webkit-details-marker {
-        display: none;
-    }
-    span > details > summary > object {
-        float: right;
-        top: 0.5em;
-        position: relative;
-    }
-    details[open] summary {
-        font-weight: bold;
-        margin-bottom: 1em;
-    }
-
-    details > summary:hover {
-        color: orange;
-    }
-
-    details[open] summary > object {
-        transform: rotate(180deg);
-    }
-
-    span object {
-        float: right;
-        top: 0.5em;
-        position: relative;
-    }
-
-    .svg-images{
-        transform: translateY(-115px);
-        width: 75%;
-    }
-
-    .svg-image{
-        filter: drop-shadow(3px 30px rgba(87,87,87,0.16));
-        z-index: 1;
-    }
-
-    .content{
-        height: 100%;
-        width: 90%;
-        margin: auto;
-    }
-
-    .svg-image-desktop{
-        display: none;
-    }
+.nav-bar > a {
+    position: relative;
 }
+
+.nav-bar > a::after {
+   content: "";
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   transform: scaleX(0);
+   transform-origin: right;
+   background-color: white;
+   transition: background-color 1s, transform 1s;
+}
+
+.nav-bar > a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    background-color: black;
+}
+
+.nav-bar > div{
+    font-size: 2rem !important;
+    width: 50%;
+    padding-left: 1rem;
+}
+
+.nav-bar > a > div > h1{
+    margin: 0;
+}
+
+/* End of navigation bar section ! */
+
+/* Middle page content section */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+    background-color: beige;
+}
+
+.content{
+    padding-bottom: 75px;
+}
+
+.content > h1{
+    font-size: 5rem;
+}
+
+.content > p {
+    font-size: 2rem;
+}
+
+/* End of content section */
