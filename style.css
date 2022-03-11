@@ -58,7 +58,7 @@ a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 90vh;
+    height: 100vh;
     background-color: beige;
 }
 
@@ -72,6 +72,15 @@ a{
 
 .content > p {
     font-size: 2rem;
+}
+
+.button{
+    background-color: green;
+    padding: 10px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.5rem;
 }
 
 /* End of content section */
