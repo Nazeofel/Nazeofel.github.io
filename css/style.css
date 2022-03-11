@@ -1,0 +1,137 @@
+body, html, main{
+    margin: 0;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    padding: 0;
+    color: black;
+}
+
+/* Navigation bar section ! */
+
+/*.nav-bar{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    gap: 10rem;
+    font-size: 2rem;
+    background-color: aliceblue ;
+}
+
+.nav-bar > a {
+    position: relative;
+}
+
+.nav-bar > a::after {
+   content: "";
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   transform: scaleX(0);
+   transform-origin: right;
+   background-color: white;
+   transition: background-color 1s, transform 1s;
+}
+
+.nav-bar > a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    background-color: black;
+}
+
+.nav-bar > div{
+    font-size: 2rem !important;
+    width: 50%;
+    padding-left: 1rem;
+}
+
+.nav-bar > a > div > h1{
+    margin: 0;
+}*/
+
+/* End of navigation bar section ! */
+
+/* Middle page content section */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    background-color: beige;
+}
+
+.content{
+    padding-bottom: 75px;
+}
+
+
+.content > span {
+    display: block;
+    overflow: hidden;
+}
+
+.content :nth-child(odd) span,
+.content :nth-child(even) span{
+    display: block;
+    transform: translateY(200%);
+    animation: easeIn 1s forwards ease-in;
+}
+
+.content :nth-child(5) span{
+    animation-delay: 900ms;
+}
+
+.content :nth-child(4) span{
+    animation-delay: 700ms;
+}
+
+.content :nth-child(3) span{
+    animation-delay: 500ms;
+}
+
+.content :nth-child(2) span{
+    animation-delay: 300ms;
+}
+
+.content :nth-child(1) span{
+    animation-delay: 150ms;
+}
+
+.content :nth-child(1) span > h1{
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+.content :nth-child(even) span > p,
+.content :nth-child(odd) span > p {
+    font-size: 2rem;
+}
+
+.button{
+    cursor: pointer;
+    background-color: green;
+    padding: 10px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* End of content section */
+
+/* Animation */
+
+@keyframes easeIn {
+    from{
+        transform: translateY(200%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
