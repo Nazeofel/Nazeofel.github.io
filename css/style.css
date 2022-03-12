@@ -110,6 +110,10 @@ a{
     font-size: 2rem;
 }
 
+.content :nth-child(2) span > p {
+    margin-bottom: 0;
+}
+
 .button{
     cursor: pointer;
     background-color: green;
