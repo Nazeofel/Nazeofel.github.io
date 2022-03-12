@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;702&display=swap');
 
-body, html{
+body, html, main{
   font-family: 'Outfit', sans-serif;
   height: 100%;
   background-color: lightblue;
@@ -10,6 +10,7 @@ body, html{
   text-align: center;
   font-size: 1rem;
 }
+
 
 .container{
   display: flex;
@@ -56,14 +57,14 @@ body, html{
   border-radius: 10px;
 }
 
-.title{
+.title > p{
   font-size: 1.4rem;
   font-weight: 700;
   color: black;
   height: 35%;
 }
 
-.description{
+.description > p{
   font-size: 1.2rem;
   font-weight: 400;
   color: lightblue;
