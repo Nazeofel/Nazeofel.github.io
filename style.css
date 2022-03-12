@@ -73,6 +73,10 @@ a{
     overflow: hidden;
 }
 
+.content :nth-child(2) > span > p {
+    margin-bottom:0;
+}
+
 .content :nth-child(odd) span,
 .content :nth-child(even) span{
     display: block;
