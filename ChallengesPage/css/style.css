@@ -15,7 +15,6 @@ main{
   width: 100%;
 }
 
-
 .container{
   display: flex;
   flex-flow:row wrap;
@@ -24,22 +23,80 @@ main{
   max-width:800px;
 }
 
+.container > span{
+  display: contents;
+  transition: transform .2s;
+  animation: overflow 2s forwards ease-in;
+}
+
+.container :nth-child(odd) .content,
+.container :nth-child(even) .content{
+    display: block;
+    transform: translateY(200%);
+    animation: easeIn 1s forwards ease-in;
+}
+
+.container :nth-child(4) .content{
+    animation-delay: 700ms;
+}
+
+.container :nth-child(3) .content{
+    animation-delay: 500ms;
+}
+
+.container :nth-child(2) .content{
+    animation-delay: 300ms;
+}
+
+.container :nth-child(1) .content{
+    animation-delay: 150ms;
+}
+
 .content{
   display: flex;
+  position: relative;
   flex-direction: column;
-  background-color: white;
+  background: rgba(255, 255, 255, .3);
   border-radius: 15px;
-  transition: transform .2s, box-shadow .3s;
   padding: 10px;
+  transition: transform .2s, box-shadow .3s;
   box-shadow: 0px 0px 10px 1px white;
   min-width:200px;
   max-width: 13rem;
   flex:1;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.content:hover{
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, .4);
-  transform: scale(1.1);
+.content:after{
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  top: -20px;
+  transform: rotateZ(0) translateX(0);
+  background-color: rgba(255, 255, 255, 0.432);
+  height: 50px;
+  filter: blur(10px);
+  transition: all 2s;
+}
+
+span:nth-child(even):hover{
+    transform: scale(1.1) rotate(10deg);
+}
+
+span:nth-child(odd):hover{
+    transform: scale(1.1) rotate(-10deg);
+}
+
+span:nth-child(even) .content:hover:after{
+    transform: rotateZ(28deg) translateX(80px);
+    left: -1600px;
+}
+
+span:nth-child(odd) .content:hover:after{
+    transform: rotateZ(-28deg) translateX(-80px);
+    right: -1600px;
 }
 
 .image-container {
@@ -70,6 +127,28 @@ main{
 .description > p{
   font-size: 1.2rem;
   font-weight: 400;
-  color: lightblue;
+  color: rgb(17, 183, 238);
   margin-top: 0;
+}
+
+
+@keyframes easeIn {
+    from{
+        transform: translateY(200%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes overflow {
+  from{
+    overflow: hidden;
+  }
+  to{
+    overflow: visible;
+  }
 }
