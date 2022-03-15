@@ -24,15 +24,15 @@ main{
 }
 
 .container > span{
-  display: contents;
-  transition: transform .2s;
+  display: block;
+  /*transition: transform .2s;*/
   animation: overflow 2s forwards ease-in;
 }
 
 .container :nth-child(odd) .content,
 .container :nth-child(even) .content{
-    display: block;
     transform: translateY(200%);
+    display: block;
     animation: easeIn 1s forwards ease-in;
 }
 
@@ -108,7 +108,6 @@ span:nth-child(odd) .content:hover:after{
   flex-direction:column;
   gap:10px;
 }
-
 
 .image{
   max-width: 100%;
