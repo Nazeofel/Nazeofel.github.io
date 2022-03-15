@@ -24,8 +24,8 @@ main{
 }
 
 .container > span{
-  display: block;
-  /*transition: transform .2s;*/
+  display: inherit;
+  transition: transform .2s;
   animation: overflow 2s forwards ease-in;
 }
 
