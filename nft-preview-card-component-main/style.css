@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --cyan-transparent: hsl(178, 100%, 50%, .5);
+
+  --bg-body-color: hsl(217, 54%, 11%);
+  --bg-card-color: hsl(216, 50%, 16%);
+  --lines-color: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+
+  --cursor: pointer;
+}
+
+body {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+background-color: var(--bg-body-color);
+font-family: 'Outfit', sans-serif;
+font-size: 18px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-card-color);
+  padding: 1.5em 0 1em 0;
+  max-width: 21rem;
+  border-radius: 20px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.img{
+  position: relative;
+  width: 100%;
+}
+
+.img::before{
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.img:hover:before{
+  content: url(images/icon-view.svg);
+  cursor: var(--pointer);
+  border-radius: 10px;
+  background-color: var(--cyan-transparent);
+}
+
+.img > img {
+  display: block;
+  width: inherit;
+  border-radius: 10px;
+}
+
+
+.card > h3{
+  font-weight: 600;
+  color: var(--white);
+}
+
+h3:hover, .signature :nth-child(3):hover{
+  cursor: var(--pointer);
+  color: var(--cyan);
+}
+
+.colored-p{
+  color: var(--soft-blue);
+}
+
+p{
+  font-weight: 300;
+  margin: 0;
+}
+
+.current-status{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 1rem 0;
+}
+
+.clock, .ethereum{
+  display: flex;
+  width: 50%;
+}
+.clock{
+  justify-content: end;
+}
+
+.ethereum{
+  justify-content: start;
+}
+
+.ethereum > p {
+  padding-left: 0.5em;
+  color: var(--cyan);
+}
+
+.clock > p{
+  padding-left: 0.5em;
+}
+
+.clock > img {
+  aspect-ratio: 1;
+    height: fit-content;
+    align-self: center;
+}
+
+hr{
+  width: 100%;
+  border: 1px solid var(--lines-color);
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+}
+
+.signature > img {
+  border: solid 1px var(--white);
+  border-radius: 50%;
+  width: 10%;
+  aspect-ratio: 1;
+}
+
+.signature :nth-child(2){
+  padding: 0 0.5em 0 0.9em;
+  color: var(--soft-blue);
+}
+
+.signature :nth-child(3){
+  color: var(--white);
+}
