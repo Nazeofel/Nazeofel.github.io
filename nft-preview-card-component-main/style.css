@@ -56,7 +56,7 @@ font-size: 18px;
 
 .img:hover:before{
   content: url(images/icon-view.svg);
-  cursor: var(--pointer);
+  cursor: var(--cursor);
   border-radius: 10px;
   background-color: var(--cyan-transparent);
 }
@@ -74,7 +74,7 @@ font-size: 18px;
 }
 
 h3:hover, .signature :nth-child(3):hover{
-  cursor: var(--pointer);
+  cursor: var(--cursor);
   color: var(--cyan);
 }
 

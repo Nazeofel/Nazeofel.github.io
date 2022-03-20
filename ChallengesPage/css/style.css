@@ -110,6 +110,7 @@ span:nth-child(odd) .content:hover:after{
 }
 
 .image{
+  object-fit: cover;
   max-width: 100%;
   height: 100%;
   border-radius: 10px;
